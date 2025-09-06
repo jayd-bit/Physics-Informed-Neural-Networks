@@ -1,30 +1,50 @@
-# Physics-Informed Neural Networks (PINNs)
+# Physics-Informed Neural Networks (PINN) – Free Fall Example
 
-This project demonstrates the implementation of **Physics-Informed Neural Networks (PINNs)** in PyTorch for solving physics-based problems, such as the motion of a particle under gravity (free fall governed by the wave/ODE equation). 
+This repository demonstrates a simple implementation of **Physics-Informed Neural Networks (PINNs)** using PyTorch. The goal is to solve the motion of a falling object under gravity, combining noisy data with physical laws (ODE constraints).
 
-### 🚀 Features
-- Combines data-driven learning with physical constraints (PDE/ODE residuals).
-- Implements a simple feed-forward neural network to approximate solutions. 
-- Loss function includes:
-  - Data loss (fit experimental/simulated data)
-  - Physics loss (ODE/PDE residuals)
-  - Initial/boundary condition loss
-- Example: predicting height of a free-falling object using Newton’s law of motion.
+---
 
-### 🛠️ Tech Stack
-- Python  
+## 🔹 Problem Setup
+
+We model the height of an object under gravity:
+
+\[
+h(t) = h_0 + v_0 t - \frac{1}{2} g t^2
+\]
+
+- **h0**: Initial height  
+- **v0**: Initial velocity  
+- **g**: Acceleration due to gravity  
+
+The PINN learns to approximate \(h(t)\) by minimizing:  
+- **Data loss** → Fit noisy measurements  
+- **Physics loss** → Enforce ODE constraint (dh/dt = v0 - g t)  
+- **Initial condition loss** → Enforce h(0) = h0  
+
+---
+
+## 🔹 Features
+
+- Generates synthetic noisy data  
+- Defines a simple feed-forward neural network (MLP) for \(h(t)\)  
+- Uses **automatic differentiation** to compute derivatives  
+- Implements a **combined loss** with physics, data, and initial condition terms  
+- Trains the network to approximate the free-fall trajectory  
+- Plots:
+  - Exact analytical solution  
+  - Noisy synthetic data  
+  - PINN prediction  
+
+---
+
+## 🔹 Requirements
+
+- Python 3.8+  
 - PyTorch  
-- NumPy / Matplotlib  
+- NumPy  
+- Matplotlib  
 
-### 📂 Project Structure
-- `data_generation.py` → Synthetic dataset (free-fall motion)  
-- `model.py` → PINN architecture (MLP with Tanh activation)  
-- `losses.py` → Data, physics, and IC loss functions  
-- `train.py` → Training loop with combined loss  
-- `notebooks/` → Jupyter notebook examples  
+Install dependencies:  
 
-### ▶️ Usage
 ```bash
-git clone https://github.com/your-username/pinns-project.git
-cd pinns-project
-python train.py
+pip install torch numpy matplotlib

@@ -49,7 +49,7 @@ Install dependencies:
 ```bash
 pip install torch numpy matplotlib
 
-🔹 Usage
+🔹 Usage:
 
 Clone and run:
 
@@ -60,14 +60,15 @@ python pinn_freefall.py
 
 You’ll see training progress and a plot comparing PINN predictions vs true solution vs noisy data.
 
-🔹 Results
+🔹 Results:
 
 PINN learns to fit noisy data while respecting physical laws.
 
 Even with small data, the model generalizes well because of the physics constraints.
 
 <p align="center"> <img src="docs/pinn_plot.png" width="500"> </p>
-🔹 Future Work
+
+🔹 Future Work:
 
 Extend to PDEs (e.g., wave equation, heat equation).
 
@@ -75,6 +76,6 @@ Apply to real-world physics problems (acoustics, fluid dynamics).
 
 Experiment with deeper networks and advanced optimizers.
 
-🔹 References
+🔹 References:
 
 Raissi, M., Perdikaris, P., & Karniadakis, G. E. (2019). Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations.

@@ -1,4 +1,4 @@
-# Physics-Informed Neural Networks (PINN) – Free Fall Example
+# Physics-Informed Neural Networks (PINN):
 
 This repository demonstrates a simple implementation of **Physics-Informed Neural Networks (PINNs)** using PyTorch. The goal is to solve the motion of a falling object under gravity, combining noisy data with physical laws (ODE constraints).
 

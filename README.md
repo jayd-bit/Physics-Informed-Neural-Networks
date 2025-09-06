@@ -2,6 +2,9 @@
 
 This repository demonstrates a simple implementation of **Physics-Informed Neural Networks (PINNs)** using PyTorch. The goal is to solve the motion of a falling object under gravity, combining noisy data with physical laws (ODE constraints).
 
+Motivation
+
+Ideal for learners exploring model-based scientific machine learning and neural differential equation methods.
 ---
 
 ## 🔹 Problem Setup
@@ -79,3 +82,12 @@ Experiment with deeper networks and advanced optimizers.
 🔹 References:
 
 Raissi, M., Perdikaris, P., & Karniadakis, G. E. (2019). Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations.
+
+Add a Friendly Disclaimer About Handwritten Notes:
+
+If you plan to show handwritten notes in your repo, you can add a subtle disclaimer like:
+
+Note: My handwriting may not be perfect, but the notes are thoughtfully arranged and insightful—hope you find them helpful
+
+![Python](https://img.shields.io/badge/python-3.8%2B-blue)
+![License](https://img.shields.io/github/license/jayd-bit/Physics-Informed-Neural-Networks)
